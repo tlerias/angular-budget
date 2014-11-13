@@ -1,0 +1,34 @@
+<div class="jumbotron">
+  <form name="budgetForm" ng-submit="saveData( budget )" novalidate>
+    <table class='table table-striped'>
+      <tr>
+        <th> Year </th>
+        <th> Month </th>
+        <th> Budget Amount </th>
+      </tr>
+      <tr ng-repeat="item in budget" >
+        <td ng-class="{highlight: isToday( item ) }" >
+          {{ item.date | date: 'yyyy' }}
+        </td>
+        <td ng-class="{highlight: isToday( item ) }" >
+          {{ item.date | date: 'MMMM' }}
+        </td>
+        <td ng-class="{highlight: isToday( item ) }" >
+            $ <input type="number" min="100" max="100000" ng-model="item.budget" name="budget"
+            ng-readonly='isPastDate( item.date )'>
+        </td>
+      </tr>
+    </table>
+    <div class="btn-container">
+      <button type="submit" id="submit" class="btn" ng-click="formSumitted=true"> Save </button>
+    </div>
+    <div ng-show="formSumitted" class='error'>
+      <span ng-show="budgetForm.$invalid">
+      All budgets must be higher than $100 and lower than $100,000!</span>
+    </div>
+    <div class='response'>
+      {{ message }}
+    </div>
+  </form>
+</div>
+

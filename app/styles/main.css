@@ -1,0 +1,80 @@
+/* Space out content a bit */
+body {
+  padding: 20px 0;
+  font-family: arial;
+}
+
+.jumbotron {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 80%;
+}
+
+table {
+  width: 100%;
+}
+
+.table-striped > tbody > tr:nth-child(odd) {
+  background-color: #e5e5ff;
+}
+
+.table-striped > tbody > tr:nth-child(even) {
+  background-color: #ccccff;
+}
+
+.table > tbody > tr > th {
+  border-top: 1px solid #ddd;
+}
+.table > tbody > tr > th:first-child {
+  border-left: 1px solid #ddd;
+}
+.table > tbody > tr > th:last-child {
+  border-right: 1px solid #ddd;
+}
+
+th, tr, td {
+    text-align: center;
+    padding: 5px;
+  }
+
+th {
+  color:#7f7fff;
+  background-color: #fff;
+}
+
+input {
+  margin: 0 0 0 5px;
+}
+
+.highlight {
+  background-color: #ffffe5;
+}
+
+.error {
+  color: #FF0000;
+  text-align: center;
+}
+
+.btn-container {
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border-color: #7f7fff;
+  border: 1px solid #7f7fff;
+  background-color: #fff;
+  color: #7f7fff;
+  text-decoration: bold;
+}
+
+
+@media screen and (max-width: 767px) {
+  input {
+    width: 50%;
+  }
+}
+
